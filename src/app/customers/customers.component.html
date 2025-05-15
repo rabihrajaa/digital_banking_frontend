@@ -1,5 +1,8 @@
 <div class="container mt-2">
   <div class="card" *ngIf="customers">
+    <div *ngIf="errorMessage" class="text-bg-danger">
+      {{errorMessage}}
+    </div>
     <div class="card-header">Customers</div>
     <div class="card-body">
       <table class="table">
