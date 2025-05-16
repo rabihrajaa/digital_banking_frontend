@@ -41,4 +41,8 @@ export class CustomersComponent implements OnInit {
       }),
     );
   }
+
+  handleDeleteCustomer(c: Customer) {
+
+  }
 }
