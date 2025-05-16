@@ -23,7 +23,7 @@ export class CustomerService {
   }
 
   public deleteCustomer(id:number){
-    return this.http.delete(this.backendHost+"/customers"+id);
+    return this.http.delete(this.backendHost+"/customers/"+id);
   }
 
 }
