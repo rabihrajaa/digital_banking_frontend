@@ -18,4 +18,8 @@ export class CustomerService {
     return this.http.get<Array<Customer>>(this.backendHost+"/customers/search?keyword=" + keyword);
   }
 
+  public SaveCustomer(customer:Customer): Observable<Customer> {
+    return this.http.post<Customer>(this.backendHost+"/customers",customer);
+  }
+
 }
