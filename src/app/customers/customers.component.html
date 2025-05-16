@@ -4,6 +4,15 @@
     <div class="card">
       <div class="card-header">Customers</div>
       <div class="card-body">
+        <div *ngIf="searchformGroup">
+          <form [formGroup]="searchformGroup" (ngSubmit)="handleSearchCustomers()">
+            <label class="input-group-text">Keyword :</label>
+            <input type="text" formControlName="keyword" class="form-control">
+            <button class="btn btn-info">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+        </div>
         <table class="table">
           <thead>
           <tr>
