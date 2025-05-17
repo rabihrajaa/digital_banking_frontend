@@ -23,6 +23,7 @@ export class AccountsComponent implements OnInit {
     currentPage: number=0;
     pageSize: number = 5;
     accountObservable!: Observable<AccountDetails>;
+    operationFormGroup!: FormGroup;
 
     constructor(private fb: FormBuilder,private accountService: AccountsService) {
     }
@@ -30,7 +31,15 @@ export class AccountsComponent implements OnInit {
   ngOnInit(): void {
     this.accountFormGroup = this.fb.group({
       accountId: ['', Validators.required],
+    });
+
+    this.operationFormGroup = this.fb.group({
+      operationType:this.fb.control(null, [Validators.required]),
+      amount: this.fb.control(null, [Validators.required]),
+      description: this.fb.control(null, [Validators.required]),
+      accountDescription: this.fb.control(null, [Validators.required])
     })
+
     }
 
   handleSearchAccount() {
@@ -43,4 +52,7 @@ export class AccountsComponent implements OnInit {
     this.handleSearchAccount()
   }
 
+  handleAccountOperation() {
+
+  }
 }

@@ -46,7 +46,25 @@
       </div>
     </div>
     <div class="col col-md-6">
-
+      <div class="card">
+        <div class="card-header">Operations</div>
+        <div class="card-body">
+          <form [formGroup]="operationFormGroup" (ngSubmit)="handleAccountOperation()" )>
+            <div class="">
+              <label>DEBIT:</label>
+              <input type="radio" formControlName="operationType">
+            </div>
+            <div class="">
+              <label>CREDIT:</label>
+              <input type="radio" formControlName="operationType">
+            </div>
+            <div class="">
+              <label>TRANSFER:</label>
+              <input type="radio" formControlName="operationType">
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 
