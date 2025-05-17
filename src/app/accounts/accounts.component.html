@@ -37,6 +37,11 @@
             </tr>
             </tbody>
           </table>
+          <ul>
+            <li *ngFor="let item of [].constructor(accountDtails.totalPages);let page=index">
+              <a class="btn btn-outline-info">{{page}}</a>
+            </li>
+          </ul>
         </ng-container>
       </div>
     </div>
