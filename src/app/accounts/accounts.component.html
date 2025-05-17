@@ -1,16 +1,24 @@
 <div class="container mt-2">
-  <div class="card">
-    <div class="card-header">Accounts</div>
-    <form [formGroup]="accountFormGroup" (ngSubmit)="handleSearchAccount()">
-      <div class="card-body">
-        <div class="input-group">
-          <label class="input-group-text">Account Id :</label>
-          <input type="text" formControlName="accountId" class="form-control">
-          <button type="submit" class="btn btn-info">
-            <i class="bi bi-search"></i>
-          </button>
-        </div>
+  <div class="row">
+    <div class="col col-md-6">
+      <div class="card">
+        <div class="card-header">Accounts</div>
+        <form [formGroup]="accountFormGroup" (ngSubmit)="handleSearchAccount()">
+          <div class="card-body">
+            <div class="input-group">
+              <label class="input-group-text">Account Id :</label>
+              <input type="text" formControlName="accountId" class="form-control">
+              <button type="submit" class="btn btn-info">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
-    </form>
+    </div>
+    <div class="col col-md-6">
+
+    </div>
   </div>
+
 </div>

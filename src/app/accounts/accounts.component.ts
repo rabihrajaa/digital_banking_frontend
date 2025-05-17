@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
+import {AccountsService} from '../services/accounts.service';
 
 @Component({
   selector: 'app-accounts',
@@ -12,7 +13,7 @@ import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/
 export class AccountsComponent implements OnInit {
     accountFormGroup!: FormGroup;
 
-    constructor(private fb: FormBuilder) {
+    constructor(private fb: FormBuilder,private accountService: AccountsService) {
     }
 
   ngOnInit(): void {
