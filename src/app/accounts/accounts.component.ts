@@ -3,7 +3,7 @@ import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/
 import {AccountsService} from '../services/accounts.service';
 import {AccountDetails} from '../model/accounts.model';
 import {Observable} from 'rxjs';
-import {AsyncPipe, DatePipe, DecimalPipe, NgIf} from '@angular/common';
+import {AsyncPipe, DatePipe, DecimalPipe, NgClass, NgIf} from '@angular/common';
 
 @Component({
   selector: 'app-accounts',
@@ -12,7 +12,8 @@ import {AsyncPipe, DatePipe, DecimalPipe, NgIf} from '@angular/common';
     NgIf,
     AsyncPipe,
     DecimalPipe,
-    DatePipe
+    DatePipe,
+    NgClass
   ],
   templateUrl: './accounts.component.html',
   styleUrl: './accounts.component.css'
@@ -36,4 +37,10 @@ export class AccountsComponent implements OnInit {
       let accountId: string = this.accountFormGroup.value.accountId;
     this.accountObservable=this.accountService.getAccount(accountId,this.currentPage,this.pageSize)
   }
+
+  gotoPage(page:number) {
+    this.currentPage = page;
+    this.handleSearchAccount()
+  }
+
 }
