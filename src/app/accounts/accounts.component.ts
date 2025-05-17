@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-accounts',
-  imports: [],
+  imports: [
+    ReactiveFormsModule
+  ],
   templateUrl: './accounts.component.html',
   styleUrl: './accounts.component.css'
 })
@@ -19,4 +21,7 @@ export class AccountsComponent implements OnInit {
     })
     }
 
+  handleSearchAccount() {
+
+  }
 }
